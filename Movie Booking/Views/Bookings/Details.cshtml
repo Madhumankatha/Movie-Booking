@@ -1,0 +1,56 @@
+﻿@model Movie_Booking.booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movy.mname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movy.mname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.uname)
+        </dt>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.movy.price)
+        </dt>
+
+        <dd>
+
+            @Html.DisplayFor(model => model.user.uname)
+        </dd>
+
+        <dd>
+            @{
+                int total = Convert.ToInt32(Model.movy.price) * Convert.ToInt32(Model.qty);
+            }
+
+            @Html.DisplayFor(model => total)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

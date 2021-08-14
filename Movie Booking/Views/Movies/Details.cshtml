@@ -1,0 +1,66 @@
+﻿@model Movie_Booking.movy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>movy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mimg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mimg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mdesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mdesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.casting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.casting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
